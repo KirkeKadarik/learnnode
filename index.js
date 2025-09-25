@@ -1,62 +1,31 @@
-let num = 10;
-if(num > 10) {
-    console.log('bigger than 10');
-} else if (num === 10) {
-    console.log('equal to 10');
-}
- else {
-    console.log('smaller than 10');
-}
-let day = new Date("2025-09-25").getDay();
-console.log(day);
+let sum = 0;
 
-if (day === 1) {
-    console.log('Esmaspäev');
-} else if (day === 2) {
-    console.log('Teisipäev');
-} else if (day === 3) {
-    console.log('Kolmapäev');
-} else if (day === 4) {
-    console.log('Neiljapäev');
-} else if (day === 5 || day === 6) {
-    console.log('Pidupäev');
-}  else if (day === 0) {
-    console.log('Pühapäev');
-} else {
-    console.log('Imelikpäev');
+for(let i=0; i<1_000_00; i++) {
+//console.log(i);
+sum += i;
 }
+ console.log(sum);
 
-switch(day) {
-    case 1:
-        comsole.log('esmaspäev');
-        break;
-           case 2:
-        comsole.log('teisipäev');
-        break; 
-          case 3:
-        comsole.log('kolmapäev');
-        break;
-           case 4:
-        console.log('neljapäev');
-        break;
-           case 5:
-           case 6:
-        comsole.log('pidupäev');
-        break;
-           case 7:
-        comsole.log('pühaäev');
-        break;
-        default:
-            console.log('imelikpäev');
-}
-let days = ['pühapäev', 'esamaspäev', 'teisipäev', 'kolmapäev', 'neljapäev', 'reede', 'laupäev']; 
-console.log(days[day]);
+ for(let i = 10; i>0; i--) {
+    console.log(i);
+ }
+  for(let i=1; i<1_000_000; i*=2) {
+    console.log(i);
+ }
 
-num = 10;
-answer = num > 10 ? 'suurem' : 'väiksem'; // shorthand if
-console.log(answer);
-
-let value;
-answer = value ?? 'something else';//null coalescing operator;
-console.log(answer);
+let time = Date.now();
+let num = 0;
+ while(Date.now() < time+1000) {
+num++;
+ }
+ console.log(num);
  
+ num = 10;
+ while(num < 10) {
+    console.log('while');
+ }
+
+ do {
+    console.log('do');
+   
+ }  while(num < 10);
