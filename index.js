@@ -37,7 +37,7 @@ switch(day) {
         comsole.log('kolmapäev');
         break;
            case 4:
-        comsole.log('neljapäev');
+        console.log('neljapäev');
         break;
            case 5:
            case 6:
@@ -49,4 +49,14 @@ switch(day) {
         default:
             console.log('imelikpäev');
 }
+let days = ['pühapäev', 'esamaspäev', 'teisipäev', 'kolmapäev', 'neljapäev', 'reede', 'laupäev']; 
+console.log(days[day]);
+
+num = 10;
+answer = num > 10 ? 'suurem' : 'väiksem'; // shorthand if
+console.log(answer);
+
+let value;
+answer = value ?? 'something else';//null coalescing operator;
+console.log(answer);
  
