@@ -1,20 +1,13 @@
-let text = 'hello ';
-text = text + 'Kirke!';
-console.log(text);
-text = 'nfnskn';
-text = 'kghdlrer';
-text = 'ksbfekufbe';
-text = "don't use double quotes unless needed";
-text = 'don\'t use double qoutes\n unless needed';
-console.log(text);
-let name = 'Kirke';
-let age = '21';
-let sexuality = 'straight';
-text = 'Your name is ' + name + ' and you are ' + age + ' years old and your sexuality is ' + sexuality + '!';
-console.log(text);
-text = `Your name is ${name} 
-and you are ${age} years old
-and your sexuality is ${sexuality}!`;
-console.log(text);
-text = text.toUpperCase();
+let array = [1, 2, 3, 'lhliweh', true, [1, 2, 3]];
+console.log(array);
+console.log(array[2]);
+console.log(array[5][1]);
+array[3] = 'hello';
+console.log(array);
+console.log(array.length);
+array.push('new value');
+console.log(array);
+array.push(1, 3, 4, 'igfiauh', 'ojffpo');
+console.log(array);
+let text = array.join('UwU');
 console.log(text);
