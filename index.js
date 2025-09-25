@@ -1,13 +1,26 @@
-let array = [1, 2, 3, 'lhliweh', true, [1, 2, 3]];
-console.log(array);
-console.log(array[2]);
-console.log(array[5][1]);
-array[3] = 'hello';
-console.log(array);
-console.log(array.length);
-array.push('new value');
-console.log(array);
-array.push(1, 3, 4, 'igfiauh', 'ojffpo');
-console.log(array);
-let text = array.join('UwU');
-console.log(text);
+let obj = {
+    name: 'kirke',
+    age: 21,
+    sexuality: 'straight',
+    fruits: ['mango', 'apple', 'cherry'],
+    dog: {
+        age: 3,
+        name: 'Feta',
+        gender: 'female'
+    },
+    parentName: 'Ardi',
+    asd: 'asd',
+    //parent-name: 'asd', not allowed bcs-
+    //2asd: 'asd', not allowed to start with number
+    
+    'parent-name': 'Name',
+    '2asd': 'asd',
+    'some thing': 'asd2',
+
+}; 
+console.log(obj);
+console.log(obj.name);
+console.log(obj.fruits[1]);
+console.log(obj.dog.name);
+console.log(obj['parent-name']);
+console.log(Object.keys(obj));
