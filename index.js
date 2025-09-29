@@ -29,3 +29,10 @@ num++;
     console.log('do');
    
  }  while(num < 10);
+
+ function recursion(num) {
+   if(num<10)
+      console.log(num);
+   recursion(num+1);
+ }
+ recursion(0);
