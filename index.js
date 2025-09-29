@@ -1,38 +1,38 @@
-let sum = 0;
+let array = ['apple', 'pear', 'cherry', 'mango'];
 
-for(let i=0; i<1_000_00; i++) {
-//console.log(i);
-sum += i;
+for(fruit of array) {
+    console.log(fruit);
 }
- console.log(sum);
 
- for(let i = 10; i>0; i--) {
-    console.log(i);
- }
-  for(let i=1; i<1_000_000; i*=2) {
-    console.log(i);
- }
+array.forEach(fruit => {
+    console.log(fruit);
+});
 
-let time = Date.now();
-let num = 0;
- while(Date.now() < time+1000) {
-num++;
- }
- console.log(num);
- 
- num = 10;
- while(num < 10) {
-    console.log('while');
- }
+let obj = {
+    name: 'kaspar',
+    age: 32,
+    colour: 'white',
+}
 
- do {
-    console.log('do');
-   
- }  while(num < 10);
+for(key in obj) {
+    console.log(key);
+    console.log(obj[key]);
+} 
 
- function recursion(num) {
-   if(num<10)
-      console.log(num);
-   recursion(num+1);
- }
- recursion(0);
+let capital = array.map(fruit => {
+    return fruit.toUpperCase();
+});
+
+console.log(capital);
+
+let aFruits = array.filter(fruit => {
+return fruit.includes('a');
+});
+console.log(aFruits);
+
+let nums = [1, 2, 3, 4, 5, 6, 7];
+let sum = nums.reduce((total, num) => {
+    return total + num;
+});
+console.log(sum);
+
