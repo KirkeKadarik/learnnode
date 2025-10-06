@@ -48,15 +48,19 @@ module: {
     ],
   },
   plugins: [new HtmlWebpackPlugin({
-    template: './src/views/index.njk'
+    template: './src/views/index.njk',
+    templateParameters: {
+      name: 'kirke', 
+      fruis: ['apple', 'cherry', 'mango', 'pineapple' ]
+    }
   }),
   new HtmlWebpackPlugin({
     filename: 'about.html',
-    template: './src/views/about.njk'
+    template: './src/views/about.njk',
   }),
   new HtmlWebpackPlugin({
       filename: 'contacts.html',
-    template: './src/views/contacts.njk'
+    template: './src/views/contacts.njk',
   }),
   
 ],
