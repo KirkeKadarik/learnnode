@@ -1,18 +1,18 @@
 {% extends 'src/views/partials/layout.njk' %}
 {% block content %}
-    <h1>kirke :3</h1>
-    <h3>hello {{ name }}</h3>
-    <h5>fruits:</h5>
-    <ul>
-        {% for fruit in fruits %}
-            <li>{{ fruit }}</li>
+    <div class="row">
+        {% for character in characters %}
+            <div class="col-3">
+                <div class="card">
+                    <img src="{{ character.image }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ character.name }} </h5>
+                        <p class="card-text"</p>
+                        <a href="/{{character.id}}.html" class="btn btn-primary">details</a>
+
+                    </div>
+                </div>
+            </div>
         {% endfor %}
-    </ul>
-    <ul>
-        {% for i in range(1, 10) %}
-            <li>
-                <a href="/page{{ i }}.html">Page{{ i }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+    </div>
 {% endblock %}
