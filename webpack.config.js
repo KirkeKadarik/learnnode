@@ -2,6 +2,7 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { VueLoaderPlugin } from 'vue-loader';
+import webpack from "webpack";
 
 export default {
   entry: './src/index.js',
