@@ -1,52 +1,19 @@
 <script setup>
-import { computed, ref } from 'vue';
-import ItemList from './ItemList.vue';
-let newItem = ref('');
-let i = 1;
-let items = ref([
-  {id: i++, name:'leib',  isDone: true},
-  {id: i++, name:'piim,', isDone: false},
-  {id: i++, name:'sai', isDone: true},
-  {id: i++, name:'juust', isDone: true},
-  {id: i++, name:'sink', isDone: false},
-  
-]);
-let code = ref(404);
-function addItem(){
-  if(newItem.value.trim() !== '') {
-  items.value.push({id: i++, name: newItem.value.trim(),  isDone: false});
-  }
-  newItem.value = '';
-}
+import { ref } from 'vue';
 
-let doneItems = computed(() => {
-  return items.value.filter(item => item.isDone);
-});
-let todoItems = computed(() => {
-  return items.value.filter(item => !item.isDone);
-});
+let modalActive = ref(false);
 
 </script>
 <template>
-<div class="content">
-    <div class="container">
-    <div class="field has-addons">
-  <div class="control is-expanded">
-    <input v-model="newItem" class="input" type="text" placeholder="Add item" @keydown.enter="addItem">
-  </div>
-  <div class="control">
-    <button class="button is-info" @click="addItem">
-      Add item
-    </button>
-  </div>
-  </div>
- 
-<ItemList :items="items" title="All items"></ItemList>
-<ItemList :items="doneItems" title="Done items"></ItemList>
-<ItemList :items="toDoItems" title="toDo items"></ItemList>
+    <button class="button is-primary" @click="modalActive=true">Open modal</button>
 
-  <input v-model="code" class="input" type="number" placeholder="error error code">
-  <img :src="'https://http.cat/'+ code">
-</div>
+    <div class="modal" :class="{'is-active' : modalActive}">
+  <div class="modal-background" @click="modalActive=false"></div>
+  <div class="modal-content">
+    <p class="image is-4by3">
+      <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="">
+    </p>
+  </div>
+  <button class="modal-close is-large" aria-label="close" @click="modalActive=false"></button>
 </div>
 </template>
