@@ -22,7 +22,7 @@ function addItem(){
 let doneItems = computed(() => {
   return items.value.filter(item => item.isDone);
 });
-let todoItems = computed(() => {
+let toDoItems = computed(() => {
   return items.value.filter(item => !item.isDone);
 });
 
