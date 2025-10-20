@@ -1,11 +1,11 @@
 <script setup>
 import { ref } from 'vue';
+import RouterTabs from './components/RouterTabs.vue';
 
 </script>
 
 <template>
-    <RouterLink class="button is-primary" to="/">ToDo</RouterLink>
-    <RouterLink class="button is-primary" to="/modals">Modals</RouterLink>
+ <RouterTabs></RouterTabs>
 
     <RouterView></RouterView>
 </template>
