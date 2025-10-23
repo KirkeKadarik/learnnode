@@ -28,8 +28,7 @@ let toDoItems = computed(() => {
 
 </script>
 <template>
-<div class="content">
-    <div class="container">
+
     <div class="field has-addons">
   <div class="control is-expanded">
     <input v-model="newItem" class="input" type="text" placeholder="Add item" @keydown.enter="addItem">
@@ -47,6 +46,5 @@ let toDoItems = computed(() => {
 
   <input v-model="code" class="input" type="number" placeholder="error error code">
   <img :src="'https://http.cat/'+ code">
-</div>
-</div>
+
 </template>
