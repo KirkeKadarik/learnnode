@@ -3,13 +3,6 @@ import chalk from 'chalk';
 
 
 
-
-
-
-
-
-
-
 console.log(
   boxen(
     chalk.bgRed('P') + chalk.bgYellow('E') + chalk.bgGreen('R') + chalk.bgCyan('R') + chalk.bgMagenta('Y'),
